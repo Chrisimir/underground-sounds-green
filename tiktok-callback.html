@@ -6,5 +6,11 @@ main{max-width:720px;margin:0 auto;padding:48px 16px}a{color:var(--accent)}h1{li
 nav a{margin-right:16px}</style></head><body><main>
 <nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
 <h1>Almost done</h1>
-<p>Copy the full address of this page from your browser's address bar and paste it into the dashboard's
-TikTok <b>Finish connecting</b> box.</p><p class="muted"><small>Last updated: 18 November 2026</small></p></main></body></html>
+<p>Copy this address and paste it into the dashboard's TikTok <b>Finish connecting</b> box:</p>
+<textarea id="u" readonly rows="5" style="width:100%;background:#1a1b20;color:#e8e8ea;border:1px solid #333;border-radius:8px;padding:8px;font:13px monospace"></textarea>
+<p><button id="c" style="background:#3ddc84;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer">Copy</button> <span id="m" class="muted"></span></p>
+<script>
+var u=document.getElementById('u'); u.value=location.href;
+document.getElementById('c').onclick=function(){u.select();try{document.execCommand('copy');document.getElementById('m').textContent='Copied';}catch(e){}};
+</script>
+<p class="muted"><small>Last updated: 18 November 2026</small></p></main></body></html>
